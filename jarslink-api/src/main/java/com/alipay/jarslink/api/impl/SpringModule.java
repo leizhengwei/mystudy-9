@@ -200,7 +200,8 @@ public class SpringModule implements Module {
         ResourceBundle.clearCache(classLoader);
         //Clear the introspection cache for the given ClassLoader
         CachedIntrospectionResults.clearClassLoader(classLoader);
-        LogFactory.release(classLoader);
+        // fix 一个问题
+//        LogFactory.release(classLoader);
     }
 
     /**
