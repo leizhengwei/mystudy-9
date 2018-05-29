@@ -22,10 +22,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>pl.project13.maven</groupId>
-                <artifactId>git-commit-id-plugin</artifactId>
-            </plugin>
         </plugins>
     </build>
 
@@ -158,6 +154,12 @@
         <dependency>
              <groupId>com.onlyone</groupId>
              <artifactId>module-demo-1</artifactId>
+             <version>0.0.1</version>
+        </dependency>
+        
+         <dependency>
+             <groupId>com.onlyone</groupId>
+             <artifactId>module-demo-2</artifactId>
              <version>0.0.1</version>
         </dependency>
 
