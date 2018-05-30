@@ -151,16 +151,18 @@ public class SpringModule implements Module {
     protected <R, T> T doActionWithinModuleClassLoader(Action<R, T> action, R actionRequest) {
         checkNotNull(action, "action is null");
         checkNotNull(actionRequest, "actionRequest is null");
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+
+        // 为了验证，如果不强制上下文的classLoader，会不会影响执行结果？
+//        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         try {
-            ClassLoader moduleClassLoader = action.getClass().getClassLoader();
-            Thread.currentThread().setContextClassLoader(moduleClassLoader);
+//            ClassLoader moduleClassLoader = action.getClass().getClassLoader();
+//            Thread.currentThread().setContextClassLoader(moduleClassLoader);
             return action.execute(actionRequest);
         } catch (Exception e) {
             LOGGER.error("调用模块出现异常,action=" + action, e);
             throw new ModuleRuntimeException("doActionWithinModuleClassLoader has error,action=" + action, e);
         } finally {
-            Thread.currentThread().setContextClassLoader(classLoader);
+//            Thread.currentThread().setContextClassLoader(classLoader);
         }
     }
 

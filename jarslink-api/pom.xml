@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.alipay.jarslink</groupId>
     <artifactId>jarslink-api</artifactId>
-    <version>1.6.2-beta</version>
+    <version>1.7.2-beta</version>
     <name>Alipay JarsLink API</name>
     <url>https://github.com/alibaba/jarslink</url>
     <packaging>jar</packaging>
